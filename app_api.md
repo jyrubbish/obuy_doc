@@ -240,7 +240,7 @@
 ## 10.获取某一排期的购买记录
 
 #### 请求方式：GET
-/api/proSchedule/:sche_id/order/pginfo?type=sche
+/api/proSchedule/:sche_id/order/pginfo
 #### 请求参数：
 | 参数  | 是否必须  | 说明|
 |:------------- | -------------:|-------------:|
@@ -387,7 +387,7 @@
 ## 17.获取会员中奖信息
 
 #### 请求方式：GET
-/api/award/pginfo
+/api/member/:m_id/award/pginfo
 #### 请求参数：
 | 参数  | 是否必须  | 说明|
 |:------------- | -------------:|-------------:|
