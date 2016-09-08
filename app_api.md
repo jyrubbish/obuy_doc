@@ -12,7 +12,7 @@
 |:------------- | -------------:|-------------:|
 |data |是 |obuy_model.Member|
     {
-	    status:1,
+	    status:"1",
 	    msg:"success",
 	    data:
 		{
@@ -69,9 +69,9 @@
 |other |是 |冗余|
 #### 返回结构：
     {
-	    status:1,
+	    status:"1",
 	    msg:"success",
-	    data:1
+	    data:"1"
     }
 	
 	
@@ -87,9 +87,9 @@
 |new_pwd| 是 | 新密码 |
 #### 返回结构：
     {
-	    status:1,
+	    status:"1",
 	    msg:"success",
-	    data:1
+	    data:"1"
     }
 	
 ## 4.绑定手机号
@@ -103,9 +103,9 @@
 |m_phone|是|手机号码|
 #### 返回结构：
     {
-	    status:1,
+	    status:"1",
 	    msg:"success",
-	    data:1
+	    data:"1"
     }
 ## 5.绑定邮箱
 
@@ -118,9 +118,9 @@
 |m_email|是|邮箱|
 #### 返回结构：
     {
-	    status:1,
+	    status:"1",
 	    msg:"success",
-	    data:1
+	    data:"1"
     }
 ## 6.绑定地址
 
@@ -133,9 +133,9 @@
 |m_addr|是|地址|
 #### 返回结构：
     {
-	    status:1,
+	    status:"1",
 	    msg:"success",
-	    data:1
+	    data:"1"
     }
  
  
@@ -152,7 +152,7 @@
 |:------------- | -------------:|-------------:|
 |data |是 |obuy_model.Member|
     {
-	    status:1,
+	    status:"1",
 	    msg:"success",
 	    data:
 		{
@@ -187,7 +187,6 @@
 #### 请求参数：
 | 参数  | 是否必须  | 说明|
 |:------------- | -------------:|-------------:|
-|id|是|逻辑主键|
 |o_no|是         |订单号|
 |m_id|是         |会员id|
 |sche_id|是      |排期号|
@@ -206,9 +205,9 @@
 
 #### 返回结构：
     {
-	    status:1,
+	    status:"1",
 	    msg:"success",
-	    data:1
+	    data:"1"
 	}
 
 	
@@ -227,11 +226,33 @@
 |:------------- | -------------:|-------------:|
 |data|是|[]respmodel.OdGetByMIdPgInfoResp|
     {
-	    status:1,
+	    status:"1",
 	    msg:"success",
 	    data:
 		[
-		{},
+		{
+		  sche_id:1,
+		    sche_no:1314,
+		    sche_status:1,
+		    cat_id:1,
+		    cat_name:"手机",
+		    pro_id:1,
+		    pro_name:"iphone7",
+		    pro_status:1,
+		    m_id:1,
+		    m_name:"do",
+		    m_img:"ad",
+		    m_phone:13214,
+		    m_addr:"ad",
+		    o_id:1,
+		    o_code:132,
+		    o_no:13,
+		    o_cnt:1,
+		    o_amount:13,
+		    o_time:"2016-9-8 19:04:25",
+		    award_status:1
+		
+		},
 		{},
 		{}
 		]
@@ -253,11 +274,32 @@
 |:------------- | -------------:|-------------:|
 |data|是|[]respmodel.OdByScheIdPgInfoResp|
     {
-	    status:1,
+	    status:"1",
 	    msg:"success",
 	    data:
 		[
-		{},
+		{
+		    sche_id:1,
+		    sche_no:1314,
+		    sche_status:1,
+		    cat_id:1,
+		    cat_name:"手机",
+		    pro_id:1,
+		    pro_name:"iphone7",
+		    pro_status:1,
+		    m_id:1,
+		    m_name:"do",
+		    m_img:"ad",
+		    m_phone:13214,
+		    m_addr:"ad",
+		    o_id:1,
+		    o_code:132,
+		    o_no:13,
+		    o_cnt:1,
+		    o_amount:13,
+		    o_time:"2016-9-8 19:04:25",
+		    award_status:1
+		},
 		{},
 		{}
 		]
@@ -277,10 +319,22 @@
 |:------------- | -------------:|-------------:|
 |data|是|[]respmodel.ProGetByProIdResp|
     {
-	    status:1,
+	    status:"1",
 	    msg:"success",
 	    data:
 		{
+		    cat_id:1,
+		    cat_name:"手机",
+		    pro_id:1,
+		    pro_name:"iphone7",
+		    pro_status:1,
+		    pro_price:123,
+		    pro_rate:11,
+		    pro_sw_imgs:[
+		        "1",
+		        "asd"
+		    ],
+		    pro_detail_img:"adsa"
 		}
 	}
 
@@ -295,13 +349,31 @@
 #### 返回结构：
 | 参数  | 是否必须  | 说明|
 |:------------- | -------------:|-------------:|
-|data|是|[]respmodel.ProScheGetByScheIdResp|
+|data|是|respmodel.ProScheGetByScheIdResp|
     {
-	    status:1,
+	    status:"1",
 	    msg:"success",
 	    data:
 		{
-		
+		    cat_id:1,
+		    cat_name:"手机",
+		    pro_id:2,
+		    pro_name:"iphone7",
+		    pro_status:1,
+		    pro_sw_imgs:[
+		        "a",
+		        "b",
+		        "c",
+		        "d"
+		    ],
+		    pro_detail_img:"asd",
+		    sche_id:1,
+		    sche_no:13132,
+		    sche_status:1,
+		    buied_cnt:1,
+		    all_cnt:13,
+		    pro_sale_price:1314,
+		    sche_status:2
 		}
 	}
 	
@@ -319,11 +391,24 @@
 |:------------- | -------------:|-------------:|
 |data|是|[]respmodel.ProScheHotPgInfoResp|
     {
-	    status:1,
+	    status:"1",
 	    msg:"success",
 	    data:
 		[
-		{},
+		{
+		    cat_id:1,
+		    cat_name:"手机",
+		    sche_id:1,
+		    sche_no:2,
+		    sche_status:13,
+		    pro_id:1,
+		    pro_name:"iphone7",
+		    pro_status:1,
+		    buied_cnt:12,
+		    all_cnt:100,
+		    pro_sale_price:"1000",
+		    pro_img:"ad"
+		},
 		{},
 		{}
 		]
@@ -342,11 +427,23 @@
 |:------------- | -------------:|-------------:|
 |data|是|[]respmodel.ProScheAwardingPgInfoResp|
     {
-	    status:1,
+	    status:"1",
 	    msg:"success",
 	    data:
 		[
-		{},
+		{
+		    cat_id:1,
+		    cat_name:"手机",
+		    pro_id:3,
+		    pro_name:"iphone7",
+		    pro_img:"ad",
+		    pro_status:1,
+		    sche_status:1,
+		    sche_id:1,
+		    sche_no:1314,
+		    sche_status:2
+		    
+		},
 		{},
 		{}
 		]
@@ -361,11 +458,23 @@
 |:------------- | -------------:|-------------:|
 |p_index|是         |分页 索引|
 |p_size|是         |分页 大小|
+|m_id|是|会员id|
+|o_id|是|订单id|
+|pay_time|是|支付时间|
+|p_type|是|支付类型|
+|p_status|是|支付状态|
+|is_del|是|是否删除|
+|create_time|是|创建时间|
+|create_name|是|创建人|
+|modify_name|是|修改人|
+|modify_time|是|修改时间|
+|remark|是|备注|
+|other|是|冗余|
 #### 返回结构：
     {
-	    status:1,
+	    status:"1",
 	    msg:"success",
-	    data:1
+	    data:"1"
 	}
 
 ## 16.修改支付信息
@@ -380,9 +489,9 @@
 |remark|是|备注|
 #### 返回结构：
     {
-	    status:1,
+	    status:"1",
 	    msg:"success",
-	    data:1
+	    data:"1"
 	}
 ## 17.获取会员中奖信息
 
@@ -399,11 +508,31 @@
 |:------------- | -------------:|-------------:|
 |data|是|[]respmodel.ProScheGetByScheIdResp|
     {
-	    status:1,
+	    status:"1",
 	    msg:"success",
 	    data:
 		[
-		{},
+		{
+		    m_id:1,
+		    m_name:"ad",
+		    m_phone:12314151,
+		    award_id:2,
+		    sche_id:3,
+		    sche_no:5,
+		    sche_status:1,
+		    o_cnt:1,
+		    o_amount:"12",
+		    o_time:"2016-9-8 18:40:28",
+		    award_status:1,
+		    cat_id:1,
+		    cat_name:"手机",
+		    pro_id:1,
+		    pro_name:"iphone7",
+		    pro_status:1,
+		    o_id:1,
+		    o_no:1231241452414,
+		    o_code:131312314
+			},
 		{},
 		{}
 		]
